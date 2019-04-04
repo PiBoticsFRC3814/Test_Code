@@ -9,6 +9,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import frc.robot.RobotMap;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 //import com.analog.adis16448.frc.*;
@@ -27,10 +28,10 @@ public class PID extends PIDSubsystem {
   public static DifferentialDrive pidrive;
 
   public PID() {
-    super("SubsystemName", 1, 2, 3);
+    super("PID", 1, 2, 3);
     pidrive = new DifferentialDrive(motor1, motor2);
-    motor1 = new WPI_TalonSRX(11);
-    motor2 = new WPI_TalonSRX(12);
+    motor1 = new WPI_TalonSRX(RobotMap.left_Drive);
+    motor2 = new WPI_TalonSRX(RobotMap.right_Drive);
    // gyro = new ADIS16448_IMU();
   }
 
