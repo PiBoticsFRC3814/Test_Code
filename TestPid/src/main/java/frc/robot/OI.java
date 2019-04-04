@@ -21,7 +21,7 @@ public class OI {
   public Button go = new JoystickButton(tester, 1);
 
   public OI(){
-    go.whileHeld(new RunPID());
+    go.whenActive(new RunPID());
     go.whenInactive(new NoRunPID());
   }
 }

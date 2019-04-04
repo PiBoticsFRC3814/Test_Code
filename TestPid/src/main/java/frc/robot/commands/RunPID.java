@@ -18,13 +18,13 @@ public class RunPID extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    Robot.m_PID.enable();
+    Robot.m_PID.setSetpoint(90);
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.m_PID.setSetpoint(90);
-    Robot.m_PID.enable();
   }
 
   // Make this return true when this Command no longer needs to run execute()
