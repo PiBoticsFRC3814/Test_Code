@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 public class OI {
   public Joystick tester = new Joystick(RobotMap.drive_Stick);
   public Button go = new JoystickButton(tester, 1);
+  public Button reset = new JoystickButton(tester, 3);
 
   public OI(){
     go.whenActive(new RunPID());
